@@ -5,6 +5,8 @@ const computersChoice = document.getElementById("computersChoice");
 
 // BUTTONS
 const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
 
 let scorePlayer = 0;
 let computChoice = " ";
@@ -25,7 +27,17 @@ function getComputersChoice() {
     computersChoice.innerHTML = computChoice;
 }
 
-rock.addEventListener('click', getComputersChoice)
+function changeColor (x, y, z) { 
+  x.style.backgroundColor = "lightblue";
+  y.style.backgroundColor = "lightgrey";
+  z.style.backgroundColor = "lightgrey";
+}
 
+// EVENTS
+
+rock.addEventListener('click', getComputersChoice)
+rock.addEventListener('click', function() {changeColor(rock, paper, scissors);})
+paper.addEventListener('click', function() {changeColor(paper, rock, scissors);})
+scissors.addEventListener('click', function() {changeColor(scissors, rock, paper);})
 
 
