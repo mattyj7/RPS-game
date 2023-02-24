@@ -1,0 +1,36 @@
+
+body {
+    background-color: bisque;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 20px;
+}
+
+.gameButton {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+}
+
+.gameButton button {
+    font-size: 32px;
+}
+
+h1 {
+    color: black;
+    font-size: 48px;
+    text-align: center;
+}
