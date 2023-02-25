@@ -40,3 +40,13 @@ h1 {
     font-size: 48px;
     text-align: center;
 }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#battle {
+    font-size: 30px;
+}

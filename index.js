@@ -1,12 +1,15 @@
 const playerScore = document.getElementById("playerScore");
 const outcome = document.getElementById("outcome");
-const computerOptions = ["rock", "paper", "scissors"];
+const computerOptions = ["Rock", "Paper", "Scissors"];
 const computersChoice = document.getElementById("computersChoice");
+const playersChoice = document.getElementById("playersChoice")
+const battle = document.getElementById("battle");
 
 // BUTTONS
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const options = document.querySelectorAll("#rock, #paper, #scissors");
 
 let scorePlayer = 0;
 let computChoice = " ";
@@ -35,9 +38,15 @@ function changeColor (x, y, z) {
 
 // EVENTS
 
-rock.addEventListener('click', getComputersChoice)
+// for(let i=0; i<options.length; i++) {
+//   options[i].addEventListener('click', getComputersChoice, false)
+// }
+
+battle.addEventListener('click', getComputersChoice)
 rock.addEventListener('click', function() {changeColor(rock, paper, scissors);})
+rock.addEventListener('click', function() {playersChoice.innerHTML = "Rock";})
 paper.addEventListener('click', function() {changeColor(paper, rock, scissors);})
+paper.addEventListener('click', function() {playersChoice.innerHTML = "Paper";})
 scissors.addEventListener('click', function() {changeColor(scissors, rock, paper);})
 
 
