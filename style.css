@@ -1,10 +1,13 @@
 
 body {
-    background-color: bisque;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
     text-align: center;
+
 }
 
 .score {
@@ -25,8 +28,13 @@ h1, h2, h3, h4 {
 
 }
 
-.gameButton button {
-    font-size: 32px;
+button {
+    font-size: 28px;
+    border: none;
+    padding: 25px;
+    width: 250px;
+    border-radius: 25px;
+    background-color: lightgrey;
 }
 
 .round {
@@ -36,7 +44,6 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    color: black;
     font-size: 48px;
     text-align: center;
 }
@@ -45,8 +52,4 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 50px;
-}
-
-#battle {
-    font-size: 30px;
 }
