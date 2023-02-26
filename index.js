@@ -41,12 +41,12 @@ function changeColor (x, y, z) {
 //   options[i].addEventListener('click', getComputersChoice, false)
 // }
 
-// battle.addEventListener('click', getComputersChoice)
+battle.addEventListener('click', getComputersChoice)
 rock.addEventListener('click', function() {changeColor(rock, paper, scissors);})
 rock.addEventListener('click', function() {playersChoice.innerHTML = "Rock";})
 paper.addEventListener('click', function() {changeColor(paper, rock, scissors);})
 paper.addEventListener('click', function() {playersChoice.innerHTML = "Paper";})
 scissors.addEventListener('click', function() {changeColor(scissors, rock, paper);})
 scissors.addEventListener('click', function() {playersChoice.innerHTML = "Scissors";})
-let bob = getComputersChoice();
-console.log(bob);
+
+
