@@ -7,6 +7,7 @@ const playersChoice = document.getElementById("playersChoice")
 const battle = document.getElementById("battle");
 const input = document.getElementById("input");
 const playAgainButton = document.getElementById('playAgainButton');
+const gameOverText = document.getElementById('gameOverText');
 
 // BUTTONS
 const rock = document.getElementById("rock");
@@ -54,6 +55,7 @@ function print () {
 
 function showPlayAgainButton() {
   playAgainButton.style.display = 'block';
+  gameOverText.style.display = 'block';
 }
 
 function myBlurFunction() {
@@ -64,6 +66,7 @@ function myBlurFunction() {
 
 function resetGame() {
   playAgainButton.style.display = 'none';
+  gameOverText.style.display = 'none';
   outcome.innerHTML = "...";
   scoreComputer = 0;
   computerScore.innerHTML = scoreComputer;
