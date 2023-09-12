@@ -53,3 +53,7 @@ h1 {
     justify-content: center;
     margin: 50px;
 }
+
+.hidden {
+    display: none;
+}

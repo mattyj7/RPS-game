@@ -6,6 +6,7 @@ const computersChoice = document.getElementById("computersChoice");
 const playersChoice = document.getElementById("playersChoice")
 const battle = document.getElementById("battle");
 const input = document.getElementById("input");
+const playAgainButton = document.getElementById('playAgainButton');
 
 // BUTTONS
 const rock = document.getElementById("rock");
@@ -51,6 +52,10 @@ function print () {
   console.log(computChoice);
 }
 
+function showPlayAgainButton() {
+  playAgainButton.style.display = 'block';
+}
+
 function myBlurFunction() {
   input.style.backgroundColor = ""; 
   inputGames = document.querySelector("input").value;
@@ -58,6 +63,7 @@ function myBlurFunction() {
 }
 
 function resetGame() {
+  playAgainButton.style.display = 'none';
   outcome.innerHTML = "...";
   scoreComputer = 0;
   computerScore.innerHTML = scoreComputer;
@@ -70,11 +76,11 @@ function round () {
   console.log(inputGames);
   if(((inputGames + 1)/2) === scorePlayer) {
     outcome.innerHTML = "Congratulations! You have WON!";
-    resetGame();
+    showPlayAgainButton();
   }
   else if(((inputGames + 1)/2) === scoreComputer) {
     outcome.innerHTML = "Unlucky! You have lost!";
-    resetGame();
+    showPlayAgainButton();
   }
   else if(scorePlayer < inputGames) {
     if(playChoice === "Rock" && computChoice === "Scissors") {
@@ -136,5 +142,6 @@ paper.addEventListener('click', function() {changeColor(paper, rock, scissors);}
 paper.addEventListener('click', function() {playersChoice.innerHTML = "Paper"; computersChoice.innerHTML = "...";})
 scissors.addEventListener('click', function() {changeColor(scissors, rock, paper);})
 scissors.addEventListener('click', function() {playersChoice.innerHTML = "Scissors"; computersChoice.innerHTML = "...";})
+document.getElementById('playAgainButton').addEventListener('click', resetGame);
 
 
