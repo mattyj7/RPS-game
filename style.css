@@ -58,6 +58,7 @@ h1 {
     display: none;
 }
 
-.hidden btn {
-    justify-content: center;
+
+#gameOverText {
+    color: whitesmoke;
 }
