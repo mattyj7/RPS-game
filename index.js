@@ -17,6 +17,7 @@ let scorePlayer = 0;
 let scoreComputer = 0;
 let computChoice = " ";
 let inputGames = 5;
+
 // functions
 
 function addPointPlayer() {
@@ -56,14 +57,24 @@ function myBlurFunction() {
   return inputGames
 }
 
+function resetGame() {
+  outcome.innerHTML = "...";
+  scoreComputer = 0;
+  computerScore.innerHTML = scoreComputer;
+  scorePlayer = 0;
+  playerScore.innerHTML = scorePlayer;
+}
+
 function round () {
   let playChoice = playersChoice.innerHTML;
   console.log(inputGames);
   if(((inputGames + 1)/2) === scorePlayer) {
     outcome.innerHTML = "Congratulations! You have WON!";
+    resetGame();
   }
   else if(((inputGames + 1)/2) === scoreComputer) {
     outcome.innerHTML = "Unlucky! You have lost!";
+    resetGame();
   }
   else if(scorePlayer < inputGames) {
     if(playChoice === "Rock" && computChoice === "Scissors") {
