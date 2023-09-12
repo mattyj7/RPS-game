@@ -57,3 +57,7 @@ h1 {
 .hidden {
     display: none;
 }
+
+.hidden btn {
+    justify-content: center;
+}
